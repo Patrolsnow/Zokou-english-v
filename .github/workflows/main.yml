@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [50.x]
+        node-version: [20.x]
 
     steps:
     - name: Checkout repository
@@ -28,3 +28,6 @@ jobs:
 
     - name: Install dependencies
       run: npm install -g pm2 &&  npm install
+
+    - name: Start application
+      run: npm run zokou
